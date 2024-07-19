@@ -66,7 +66,7 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
 # Audio - LGE
 BOARD_LGE_HAS_EXT_AMPLIFIER := true
-ifneq ($(filter judypn judyln judyp,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
+ifneq ($(filter judypn judyln judyp,$(shell echo $(TARGET_PRODUCT) | sed 's/^lmodroid_//')),)
 BOARD_LGE_HAS_HIFI_QUAD_DAC := true
 endif
 
@@ -108,7 +108,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/lmodroid/config/device_framework_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_lge_sdm845
