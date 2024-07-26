@@ -66,7 +66,7 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
 # Audio - LGE
 BOARD_LGE_HAS_EXT_AMPLIFIER := true
-ifneq ($(filter judypn judyln judyp,$(shell echo $(TARGET_PRODUCT) | sed 's/^lmodroid_//')),)
+ifneq ($(filter judypn judyln g710n g710ulm judyp,$(shell echo $(TARGET_PRODUCT) | sed 's/^lmodroid_//')),)
 BOARD_LGE_HAS_HIFI_QUAD_DAC := true
 endif
 
