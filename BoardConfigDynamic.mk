@@ -19,7 +19,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
 
-include vendor/lineage/config/BoardConfigReservedSize.mk
+include vendor/lmodroid/config/BoardConfigReservedSize.mk
 BOARD_SUPER_PARTITION_GROUPS := lge_dynamic_partitions
 BOARD_LGE_DYNAMIC_PARTITIONS_PARTITION_LIST := product system vendor
 BOARD_LGE_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) / 2 - 4194304) # 4MiB overhead

@@ -91,7 +91,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/lmodroid/config/device_framework_matrix.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE := msm_rtb.filter=0x237 ehci-hcd.park=3

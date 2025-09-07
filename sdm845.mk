@@ -20,11 +20,11 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lmodroid
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
+    $(LOCAL_PATH)/overlay-lmodroid/lineage-sdk
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -317,7 +317,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.hardware.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.$(DEVICE_NAME).rc
 
-$(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
+$(call soong_config_set,lmodroid_recovery,bootloader_message_offset,128)
 
 # Radio
 PRODUCT_PACKAGES += \
