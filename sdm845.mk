@@ -42,9 +42,10 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
+
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -214,7 +215,7 @@ endif
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.lge
+    vendor.lineage.livedisplay-service.lge
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -317,7 +318,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.hardware.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.$(DEVICE_NAME).rc
 
-$(call soong_config_set,lmodroid_recovery,bootloader_message_offset,128)
+$(call soong_config_set,lineage_recovery,bootloader_message_offset,128)
 
 # Radio
 PRODUCT_PACKAGES += \
